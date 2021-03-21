@@ -206,7 +206,9 @@
         "touch /home/op/.z",
         "chown -R op:users /home/op",
         "chmod +x /etc/update-motd.d/00-header",
-        "chown root:root /etc/sudoers /etc/sudoers.d -R"
+        "chown root:root /etc/sudoers /etc/sudoers.d -R",
+        "echo 'Installing reconftw'",
+        "git clone https://github.com/six2dez/reconftw  /home/op/recon/reconftw && cd /home/op/recon/reconftw && chmod +x *.sh && /bin/su -l root -c /home/op/recon/reconftw/install.sh "
       ], "inline_shebang": "/bin/sh -x",
 	  "type": "shell"
     }
